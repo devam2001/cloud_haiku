@@ -19,7 +19,7 @@ files.forEach(async (file) => {
     const [text, meta] = await processMarkdown(dir + file)
     const lines = text.split('\n').filter((line) => line !== '')
 
-    if (meta.test !== false) {
+    if (meta.test == true) {
       validateHaiku(file, lines, meta)
     }
   }
